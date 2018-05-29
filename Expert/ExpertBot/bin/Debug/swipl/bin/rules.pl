@@ -21,20 +21,70 @@ edge('VERTEX ROOT', 'VERTEX APPOINTMENT').
 
 edge('VERTEX APPOINTMENT', 'hockey').
 edge('VERTEX APPOINTMENT', 'running').
+edge('VERTEX APPOINTMENT', 'figure skating').
+edge('VERTEX APPOINTMENT', 'pleasure skating').
 
 edge('hockey', 'VERTEX HOCKEY LEVEL').
 edge('running', 'VERTEX RUNNING DISC').
 
 edge('VERTEX HOCKEY LEVEL', 'hockey low').
+edge('VERTEX HOCKEY LEVEL', 'hockey mid').
 edge('VERTEX HOCKEY LEVEL', 'hockey pro').
 
-edge('hockey low', 'ANSWER HOCKEY LOW').
-edge('ANSWER HOCKEY LOW', 'company 3').
-edge('ANSWER HOCKEY LOW', 'company 4').
+edge('hockey pro', 'VERTEX HOCKEY PRO').
 
-edge('hockey pro', 'ANSWER HOCKEY PRO').
-edge('ANSWER HOCKEY PRO', 'company 1').
-edge('ANSWER HOCKEY PRO', 'company 2').
+edge('VERTEX HOCKEY PRO', 'bauer').
+edge('VERTEX HOCKEY PRO', 'ccm').
+edge('VERTEX HOCKEY PRO', 'graf').
+
+edge('bauer', 'VERTEX BAUER').
+
+edge('VERTEX BAUER', 'supreme').
+edge('VERTEX BAUER', 'vapor').
+
+edge('supreme', 'ANSWER SUPREME').
+edge('ANSWER SUPREME', 'https://www.hockeymonkey.com/bauer-hockey-skates-supreme-1s-sr.html').
+
+edge('vapor', 'ANSWER VAPOR').
+edge('ANSWER VAPOR', 'https://www.hockeymonkey.com/equipment/hockey-skates/ice-hockey-skates-senior/bauer-hockey-skates-vapor-1x-17-sr.html').
+
+edge('ccm', 'ANSWER CCM').
+edge('ANSWER CCM', 'https://www.hockeymonkey.com/equipment/hockey-skates/ice-hockey-skates-senior/ccm-hockey-skates-jetspeed-ft1-sr.html').
+edge('ANSWER CCM', 'https://www.hockeymonkey.com/equipment/hockey-skates/ice-hockey-skates-senior/ccm-hockey-skates-super-tacks-sr.html').
+
+edge('graf', 'ANSWER GRAF').
+edge('ANSWER GRAF', 'https://www.hockeymonkey.com/equipment/hockey-skates/ice-hockey-skates-senior/graf-hockey-skates-peakspeed-pk7700-sr.html').
+
+edge('hockey mid', 'VERTEX TERMO').
+
+edge('VERTEX TERMO', 'yes termo').
+edge('VERTEX TERMO', 'no termo').
+
+edge('yes termo', 'VERTEX CASH').
+edge('no termo', 'VERTEX CLEARANCE').
+
+edge('VERTEX CASH', 'yes cash').
+edge('VERTEX CASH', 'no cash').
+
+edge('yes cash', 'VERTEX HOCKEY PRO').
+edge('no cash', 'VERTEX CLEARANCE').
+
+edge('VERTEX CLEARANCE', 'yes clearance').
+edge('VERTEX CLEARANCE', 'no clearance').
+
+edge('yes clearance', 'ANSWER CLEARANCE YES').
+edge('no clearance', 'ANSWER CLEARANCE NO').
+
+edge('ANSWER CLEARANCE YES', 'https://www.hockeymonkey.com/equipment/hockey-skates/ice-hockey-skates-senior/ccm-hockey-skates-50k-pump-sr.html').
+edge('ANSWER CLEARANCE YES', 'https://www.hockeymonkey.com/equipment/hockey-skates/ice-hockey-skates-senior/ccm-hockey-skates-ribcor-50k-le-wht-sr.html').
+edge('ANSWER CLEARANCE NO', 'https://www.hockeymonkey.com/equipment/hockey-skates/ice-hockey-skates-senior/ccm-hockey-skates-tacks-9080-sr.html').
+edge('ANSWER CLEARANCE NO', 'https://www.hockeymonkey.com/equipment/hockey-skates/ice-hockey-skates-senior/graf-hockey-skates-g755-pro-sr.html').
+edge('ANSWER CLEARANCE NO', 'https://www.hockeymonkey.com/equipment/hockey-skates/ice-hockey-skates-senior/bauer-hockey-skates-supreme-s180-sr.html').
+
+edge('hockey low', 'ANSWER HOCKEY LOW').
+edge('ANSWER HOCKEY LOW', 'https://www.hockeymonkey.com/equipment/hockey-skates/ice-hockey-skates-senior/bauer-hockey-skate-supreme-s140-sr.html').
+edge('ANSWER HOCKEY LOW', 'https://www.hockeymonkey.com/equipment/hockey-skates/ice-hockey-skates-senior/ccm-hockey-skates-tacks-2092-sr.html').
+
 
 edge('VERTEX RUNNING DISC', 'konkobezh').
 edge('VERTEX RUNNING DISC', 'short track').

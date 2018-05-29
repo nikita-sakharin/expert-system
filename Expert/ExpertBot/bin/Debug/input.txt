@@ -1,1 +1,1 @@
-get_next('hockey low', Title, Res).
+get_next('yes clearance', Title, Res).
