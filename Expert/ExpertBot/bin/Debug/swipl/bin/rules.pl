@@ -19,17 +19,21 @@ get_variants(Title, Curr, ResList) :-
 
 edge('VERTEX ROOT', 'VERTEX APPOINTMENT').
 
-edge('VERTEX APPOINTMENT', 'hockey').
+edge('VERTEX APPOINTMENT', 'pleasure skating').
 edge('VERTEX APPOINTMENT', 'running').
 edge('VERTEX APPOINTMENT', 'figure skating').
-edge('VERTEX APPOINTMENT', 'pleasure skating').
+edge('VERTEX APPOINTMENT', 'hockey').
 
 edge('hockey', 'VERTEX HOCKEY LEVEL').
 edge('running', 'VERTEX RUNNING DISC').
+edge('figure skating', 'VERTEX FIGURE LEVEL').
+edge('pleasure skating', 'VERTEX PLEASURE AGE').
 
-edge('VERTEX HOCKEY LEVEL', 'hockey low').
-edge('VERTEX HOCKEY LEVEL', 'hockey mid').
+
+
 edge('VERTEX HOCKEY LEVEL', 'hockey pro').
+edge('VERTEX HOCKEY LEVEL', 'hockey mid').
+edge('VERTEX HOCKEY LEVEL', 'hockey low').
 
 edge('hockey pro', 'VERTEX HOCKEY PRO').
 
@@ -57,20 +61,20 @@ edge('ANSWER GRAF', 'https://www.hockeymonkey.com/equipment/hockey-skates/ice-ho
 
 edge('hockey mid', 'VERTEX TERMO').
 
-edge('VERTEX TERMO', 'yes termo').
 edge('VERTEX TERMO', 'no termo').
+edge('VERTEX TERMO', 'yes termo').
 
 edge('yes termo', 'VERTEX CASH').
 edge('no termo', 'VERTEX CLEARANCE').
 
-edge('VERTEX CASH', 'yes cash').
 edge('VERTEX CASH', 'no cash').
+edge('VERTEX CASH', 'yes cash').
 
 edge('yes cash', 'VERTEX HOCKEY PRO').
 edge('no cash', 'VERTEX CLEARANCE').
 
-edge('VERTEX CLEARANCE', 'yes clearance').
 edge('VERTEX CLEARANCE', 'no clearance').
+edge('VERTEX CLEARANCE', 'yes clearance').
 
 edge('yes clearance', 'ANSWER CLEARANCE YES').
 edge('no clearance', 'ANSWER CLEARANCE NO').
@@ -89,10 +93,66 @@ edge('ANSWER HOCKEY LOW', 'https://www.hockeymonkey.com/equipment/hockey-skates/
 edge('VERTEX RUNNING DISC', 'konkobezh').
 edge('VERTEX RUNNING DISC', 'short track').
 
-edge('konkobezh', 'ANSWER KONKOBEZH').
-edge('ANSWER KONKOBEZH', 'company 3').
-edge('ANSWER KONKOBEZH', 'company 5').
+edge('konkobezh', 'VERTEX KONKOBEZH').
+
+edge('VERTEX KONKOBEZH', 'podvizh').
+edge('VERTEX KONKOBEZH', 'ne podvizh').
+
+edge('podvizh', 'ANSWER PODVIZH').
+edge('ANSWER PODVIZH', 'http://k4speed.ru/catalog/komplekty/konki_viking_gold_sapphire/').
+edge('ANSWER PODVIZH', 'http://k4speed.ru/catalog/komplekty/konki_viking_silver/').
+
+edge('ne podvizh', 'ANSWER NE PODVIZH').
+edge('ANSWER NE PODVIZH', 'http://k4speed.ru/catalog/komplekty/konki_viking_original/').
 
 edge('short track', 'ANSWER SHORT TRACK').
-edge('ANSWER SHORT TRACK', 'company 1').
-edge('ANSWER SHORT TRACK', 'company 6').
+edge('ANSWER SHORT TRACK', 'http://k4speed.ru/catalog/komplekty-short-trek/konki_evo_proton_krypton/').
+
+edge('VERTEX FIGURE LEVEL', 'figure pro').
+edge('VERTEX FIGURE LEVEL', 'figure low').
+
+edge('figure pro', 'ANSWER FIGURE PRO').
+edge('ANSWER FIGURE PRO', 'http://www.figurist.ru/catalog/konki-figurnye/konki_jackson_competitor_aspire_xp_belye/').
+
+edge('figure low', 'ANSWER FIGURE LOW').
+edge('ANSWER FIGURE LOW', 'https://www.sportmaster.ru/product/10152240/').
+
+edge('VERTEX PLEASURE AGE', 'junior').
+edge('VERTEX PLEASURE AGE', 'senior').
+
+edge('junior', 'VERTEX JUNIOR').
+
+edge('VERTEX JUNIOR', 'ne razdvizh').
+edge('VERTEX JUNIOR', 'razdvizh').
+
+edge('razdvizh', 'VERTEX RAZDVIZH').
+
+edge('VERTEX RAZDVIZH', 'girl razdvizh').
+edge('VERTEX RAZDVIZH', 'boy razdvizh').
+
+edge('girl razdvizh', 'ANSWER GIRL RAZDVIZH').
+edge('ANSWER GIRL RAZDVIZH', 'https://www.sportmaster.ru/product/10055560/').
+
+edge('boy razdvizh', 'ANSWER BOY RAZDVIZH').
+edge('ANSWER BOY RAZDVIZH', 'https://www.sportmaster.ru/product/10059430/').
+
+edge('ne razdvizh', 'VERTEX NE RAZDVIZH').
+edge('VERTEX NE RAZDVIZH', 'girl ne razdvizh').
+edge('VERTEX NE RAZDVIZH', 'boy ne razdvizh').
+
+edge('girl ne razdvizh', 'ANSWER GIRL NE RAZDVIZH').
+edge('ANSWER GIRL NE RAZDVIZH', 'https://www.sportmaster.ru/product/10058689/').
+
+edge('boy ne razdvizh', 'ANSWER BOY NE RAZDVIZH').
+edge('ANSWER BOY NE RAZDVIZH', 'https://www.sportmaster.ru/product/10060173/').
+
+edge('senior', 'VERTEX SENIOR').
+
+edge('VERTEX SENIOR', 'female').
+edge('VERTEX SENIOR', 'male').
+
+edge('male', 'ANSWER MALE').
+edge('ANSWER MALE', 'https://www.sportmaster.ru/product/10155819/').
+
+edge('female', 'ANSWER FEMALE').
+edge('ANSWER FEMALE', 'https://www.sportmaster.ru/product/1192214/').

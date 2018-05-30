@@ -1,5 +1,5 @@
 
-Title = 'ANSWER CLEARANCE YES',
-Res = ['https://www.hockeymonkey.com/equipment/hockey-skates/ice-hockey-skates-senior/ccm-hockey-skates-ribcor-50k-le-wht-sr.html', 'https://www.hockeymonkey.com/equipment/hockey-skates/ice-hockey-skates-senior/ccm-hockey-skates-50k-pump-sr.html'].
+Title = 'ANSWER MALE',
+Res = ['https://www.sportmaster.ru/product/10155819/'].
 
 

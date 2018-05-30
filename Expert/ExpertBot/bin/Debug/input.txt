@@ -1,1 +1,1 @@
-get_next('yes clearance', Title, Res).
+get_next('male', Title, Res).
