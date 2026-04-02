@@ -1,5 +1,0 @@
-
-Title = 'ANSWER MALE',
-Res = ['https://www.sportmaster.ru/product/10155819/'].
-
-
